@@ -12,6 +12,12 @@ module.exports = async (req, res, User) => {
     });
     user = user[0];
 
+    //checking user exist
+    if (!user) {
+      throw new Error(
+        `No user with email: ${email} exists! Please register first.`
+      );
+    }
     //Checking verfied
     if (!user.verified) {
       throw new Error(

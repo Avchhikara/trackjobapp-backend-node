@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 
+// TODO: Add email sending feature
 // TODO: Add logic to sent verification email again if the user try to register and has already registered but hadn't verified their email and respond with a success message.
 
 module.exports = async (req, res, User) => {

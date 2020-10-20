@@ -3,7 +3,7 @@ const getCookies = require("./../../utils/getCookies");
 module.exports = async (req, res, Application) => {
   try {
     //First getting the cookies value
-    const token = getCookies(req.headers.cookie).token;
+    const token = req.body.token;
     if (!token) {
       throw new Error(
         "Unable to find any applications, please try logging in again!!"

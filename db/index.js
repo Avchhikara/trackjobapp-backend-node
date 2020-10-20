@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
-const cred = require("./credentials");
 
 const userModel = require("./model/user");
 const applicationModel = require("./model/application");
 
-mongoose.connect(cred.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

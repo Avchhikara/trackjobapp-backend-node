@@ -16,6 +16,10 @@ module.exports = (mongoose) => {
       type: Date,
       required: true,
     },
+    stage: {
+      type: String,
+      required: true,
+    },
     created_on: {
       type: Date,
       default: new Date(),
